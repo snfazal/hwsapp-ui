@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/snfazal/hwsapp-ui/issues"
   },
-  "homepage": "https://github.com/snfazal/hwsapp-ui#readme"
+  "homepage": "https://github.com/snfazal/hwsapp-ui#readme",
+  "dependencies": {
+    "express": "^4.15.0",
+    "morgan": "^1.8.1"
+  }
 }
