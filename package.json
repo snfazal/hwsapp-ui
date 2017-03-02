@@ -1,0 +1,20 @@
+{
+  "name": "hwsapp-ui",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snfazal/hwsapp-ui.git"
+  },
+  "author": "sophia fazal and alan watson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snfazal/hwsapp-ui/issues"
+  },
+  "homepage": "https://github.com/snfazal/hwsapp-ui#readme"
+}

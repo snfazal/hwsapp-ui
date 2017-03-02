@@ -8,5 +8,7 @@ app.use(express.static('public'))
 app.use(logger('dev'));
 
 app.listen(process.env.PORT || 4000, function() {
-  console.log(`listening on 4000`)
+  console.log(`================`);
+  console.log(`ALWAYS LISTENING`);
+  console.log(`================`);
 });
