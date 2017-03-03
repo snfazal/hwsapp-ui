@@ -1,6 +1,10 @@
 angular.module('wineAngularApp', ['ui.router'])
 .config(WineRouter)
+.config(authInterceptor)
 
+function authInterceptor($httpProvider) {
+  $httpProvider.interceptors.push('AuthInterceptor')
+}
 
 function WineRouter($stateProvider, $urlRouterProvider){
 
@@ -18,6 +22,10 @@ function WineRouter($stateProvider, $urlRouterProvider){
       .state('signup', {
         url: '/signup',
         templateUrl: '/partials/signup.html'
+      })
+      .state('create_wine', {
+        url: '/create_wine',
+        templateUrl: '/partials/create_wine.html'
       })
 
 }
