@@ -1,0 +1,12 @@
+<div ng-controller="WineController as wine">
+  <form ng-submit=wine.createWine(wine)>
+    <input type="text" ng-model="wine.name">
+    <input type="text" ng-model="wine.kind">
+    <input type="text" ng-model="wine.country">
+    <input type="text" ng-model="wine.region">
+    <input type="text" ng-model="wine.rating">
+    <input type="text" ng-model="wine.description">
+    <input type="text" ng-model="wine.image_url">
+
+  </form>
+</div>

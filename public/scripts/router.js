@@ -8,7 +8,8 @@ function WineRouter($stateProvider, $urlRouterProvider){
 
     $stateProvider
       .state('index', {
-        url: '/'
+        url: '/',
+        templateUrl: '/partials/home.html'
       })
       .state('login', {
         url: '/login',

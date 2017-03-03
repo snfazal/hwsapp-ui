@@ -1,5 +1,6 @@
 angular.module('wineAngularApp')
   .controller('HomeController', HomeController)
   .controller('AuthController', AuthController)
+  .controller('WineController', WineController)
   .factory('AuthTokenFactory', AuthTokenFactory)
   .factory('AuthInterceptor', AuthInterceptor)
