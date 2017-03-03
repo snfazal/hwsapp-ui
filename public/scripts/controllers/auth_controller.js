@@ -28,11 +28,10 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
   self.login = login;
 
   function logout() {
-    console.log("logging out");
-    // AuthTokenFactory.setToken()
-    //
-    // $scope.$emit('userLoggedOut');
-    // $state.go('index');
+    AuthTokenFactory.setToken()
+
+    $scope.$emit('userLoggedOut');
+    $state.go('index');
   }
 
   self.logout = logout;

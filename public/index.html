@@ -28,10 +28,13 @@
   </head>
   <body ng-controller="HomeController as home">
     <a ui-sref="index">home</a>
-    <div class="AuthController as auth">
+    <div ng-controller="AuthController as auth">
       <a ng-if="!home.currentUser" ui-sref="signup">signup</a>
       <a ng-if="!home.currentUser" ui-sref="login">login</a>
-      <button ng-if="home.currentUser" ng-click="auth.logout()">logout</button>
+      <ul>
+
+        <li ng-if="home.currentUser" ng-click="auth.logout()">logout</li>
+      </ul>
     </div>
 
     <ui-view>
