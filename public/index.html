@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="wineAngularApp">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Wine</title>
+    <!-- link to angularjs -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <!-- ui-router code -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.15/angular-ui-router.js"></script>
+    <!-- router -->
+    <script src="/scripts/router.js"></script>
+    <!-- factories -->
+    <script src="/scripts/factories/auth_interceptor.js"></script>
+    <script src="/scripts/factories/auth_token_factory.js"></script>
+
+    <!-- controllers -->
+    <script src="/scripts/controllers/home_controller.js"></script>
+
+    <!-- APP -->
+  <script src="/scripts/app.js"></script>
+
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+
+
+  </head>
+  <body ng-controller="HomeController as home">
+  <body>
+
+
+    <div>
+      hello
+    </div>
+
+    <div>
+      {{1 + 1}}
+    </div>
+
+  </body>
+</html>

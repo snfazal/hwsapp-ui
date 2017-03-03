@@ -1,2 +1,2 @@
-angular.module('giphyAngularApp')
+angular.module('wineAngularApp')
   .controller('HomeController', HomeController)
