@@ -1,12 +1,24 @@
 <div ng-controller="AuthController as auth">
-  <form ng-submit="auth.signup(user)">
+  <form ng-submit="auth.signup(user)" class="signup">
+    <!-- email -->
     <div>
       <label for="email">email</label>
       <input type="text" ng-model="user.email">
     </div>
+    <!-- username -->
+    <div>
+      <label for="username">username</label>
+      <input type="text" ng-model="user.username">
+    </div>
+    <!-- password -->
     <div>
       <label for="password">password</label>
       <input type="password" ng-model="user.password">
+    </div>
+    <!-- phone number -->
+    <div>
+      <label for="phone_number">phone</label>
+      <input type="text" ng-model="user.phone_number">
     </div>
     <button type="submit">Signup!</button>
   </form>
