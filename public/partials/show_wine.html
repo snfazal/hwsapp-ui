@@ -1,13 +1,14 @@
-<div>
-  <img ng-src="wine.image_url">
+<div ng-controller="WineController as wines">
+  <!-- <img ng-src="wines.nowShowing.image_url"> -->
   <ul>
-    <li>Name: {{wine.name}}</li>
-    <li>Type of wine: {{wine.kind}}</li>
-    <li>Country of Origin: {{wine.country}}</li>
-    <li>Region: {{wine.region}}</li>
-    <li>Rating: {{wine.rating}}</li>
-    <li>{{wine.description}}</li>
-    <button ng-if="currentUser.id == wine.user_id" type="button" name="button">Edit Wine</button>
-    <button ng-if="currentUser.id == wine.user_id" type="button" name="button">Delete Wine</button>
+    {{wines.nowShowing}}
+    <li>Name: {{wines.nowShowing.name}}</li>
+    <li>Type of wines: {{wines.nowShowing.kind}}</li>
+    <li>Country of Origin: {{wines.nowShowing.country}}</li>
+    <li>Region: {{wines.nowShowing.region}}</li>
+    <li>Rating: {{wines.nowShowing.rating}}</li>
+    <li>{{wines.nowShowing.description}}</li>
+    <!-- <button  ng-if="currentUser.id == wines.nowShowing.user_id" type="button" name="button">Edit Wine</button>
+    <button ng-if="currentUser.id == wines.nowShowing.user_id" type="button" name="button">Delete Wine</button> -->
   </ul>
 </div>

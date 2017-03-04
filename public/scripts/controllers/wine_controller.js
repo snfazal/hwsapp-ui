@@ -1,4 +1,4 @@
-function WineController($http, $state,  AuthTokenFactory){
+function WineController($http, $state){
   var self = this;
   var server = 'http://localhost:3000';
 
@@ -22,7 +22,9 @@ function WineController($http, $state,  AuthTokenFactory){
   getWines();
 
   function showWine(wine){
+    console.log(wine);
     self.nowShowing = wine;
+    console.log(self.nowShowing);
     $state.go('show_wine');
   }
   self.showWine = showWine;

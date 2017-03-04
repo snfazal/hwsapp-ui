@@ -2,7 +2,7 @@
   <button ui-sref="create_wine">Add a new wine</button>
   <button ui-sref="create_post">Add a new post</button>
   <div ng-repeat="wine in wines.allWines" class="wines">
-    <img ng-src="{{wine.image_url}}">
+    <!-- <img ng-src="{{wine.image_url}}"> -->
     <ul>
       <li ng-click="wines.showWine(wine)">Name: {{wine.name}}</li>
       <li>Type of wine: {{wine.kind}}</li>
