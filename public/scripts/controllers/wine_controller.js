@@ -29,4 +29,13 @@ function WineController($http, $state, $scope){
     $state.go('show_wine');
   }
   self.showWine = showWine;
+
+  function editWine(wine){
+    console.log(wine);
+    $http.put(`${server}/wines/${wine.id}`, angular.toJson(wine))
+    .then(function(res){
+      console.log(res);
+    })
+  }
+  self.editWine = editWine;
 }

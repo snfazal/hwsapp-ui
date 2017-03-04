@@ -1,14 +1,28 @@
 <div ng-controller="WineController as wines">
-  <!-- <img ng-src="wines.nowShowing.image_url"> -->
+  <div ng-if=!wines.showEdit>
+
+  <img ng-src="wines.nowShowing.image_url">
   <ul>
-    {{home.nowShowing}}
     <li>Name: {{home.nowShowing.name}}</li>
     <li>Type of wines: {{home.nowShowing.kind}}</li>
     <li>Country of Origin: {{home.nowShowing.country}}</li>
     <li>Region: {{home.nowShowing.region}}</li>
     <li>Rating: {{home.nowShowing.rating}}</li>
     <li>{{home.nowShowing.description}}</li>
-    <!-- <button  ng-if="currentUser.id == wines.nowShowing.user_id" type="button" name="button">Edit Wine</button>
-    <button ng-if="currentUser.id == wines.nowShowing.user_id" type="button" name="button">Delete Wine</button> -->
   </ul>
+</div>
+    <button ng-click="wines.showEdit = !wines.showEdit" type="button" name="button" >Edit Wine</button>
+    <button type="button" name="button">Delete Wine</button>
+  <div ng-if="wines.showEdit">
+    <form ng-submit="wines.editWine(home.nowShowing)">
+      <div>Name:<input ng-model="home.nowShowing.name" type="text" name="name" placeholder="{{home.nowShowing.name}}"></div>
+      <div>Type:<input ng-model="home.nowShowing.kind" type="text" name="kind" placeholder="{{home.nowShowing.kind}}"></div>
+      <div>Country of Origin: <input ng-model="home.nowShowing.country" type="text" name="country" placeholder="{{home.nowShowing.country}}"></div>
+      <div>Region:<input ng-model="home.nowShowing.region" type="text" name="region" placeholder="{{home.nowShowing.region}}"></div>
+      <div>Rating:<input ng-model="home.nowShowing.rating" type="text" name="rating" placeholder="{{home.nowShowing.rating}}"></div>
+      <div>Description<input ng-model="home.nowShowing.description" type="text" name="description" placeholder="{{home.nowShowing.description}}"></div>
+      <div>Image Url:<input ng-model="home.nowShowing.image_url" type="text" name="image_url" placeholder="{{home.nowShowing.image_url}}"></div>
+      <div><input type="submit"></div>
+    </form>
+  </div>
 </div>
