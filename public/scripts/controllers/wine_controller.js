@@ -15,10 +15,7 @@ function WineController($http, $state,  AuthTokenFactory){
   function getWines(){
     $http.get(`${server}/wines`)
       .then(function(res){
-        console.log(res);
         self.allWines = res.data.wines;
-
-        $state.go('index')
       })
   }
   self.getWines = getWines;

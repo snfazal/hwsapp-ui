@@ -16,7 +16,6 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
     $http.post(`${server}/users/login`,
     { user: user} )
     .then(function(res){
-      console.log(res.data);
       AuthTokenFactory.setToken(res.data.token)
 
       $scope.$emit('userLoggedIn', res.data.user);

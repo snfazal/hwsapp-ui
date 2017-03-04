@@ -7,6 +7,7 @@
     <li>Region: {{wine.region}}</li>
     <li>Rating: {{wine.rating}}</li>
     <li>{{wine.description}}</li>
-    <button type="button" name="button">Edit Wine</button>
+    <button ng-if="currentUser.id == wine.user_id" type="button" name="button">Edit Wine</button>
+    <button ng-if="currentUser.id == wine.user_id" type="button" name="button">Delete Wine</button>
   </ul>
 </div>

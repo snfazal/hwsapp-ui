@@ -4,6 +4,7 @@ function HomeController($scope, $http) {
  // user login
   $scope.$on('userLoggedIn', function(event, data){
     self.currentUser = data;
+    console.log(data);
   });
 
 // user log out
