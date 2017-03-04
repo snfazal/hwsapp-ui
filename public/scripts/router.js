@@ -27,5 +27,9 @@ function WineRouter($stateProvider, $urlRouterProvider){
         url: '/create_wine',
         templateUrl: '/partials/create_wine.html'
       })
+      .state('show_wine', {
+        url: '/show_wine',
+        templateUrl: '/partials/show_wine.html'
+      })
 
 }

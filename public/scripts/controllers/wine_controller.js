@@ -23,4 +23,10 @@ function WineController($http, $state,  AuthTokenFactory){
   }
   self.getWines = getWines;
   getWines();
+
+  function showWine(wine){
+    self.nowShowing = wine;
+    $state.go('show_wine');
+  }
+  self.showWine = showWine;
 }
