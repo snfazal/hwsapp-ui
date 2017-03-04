@@ -35,7 +35,17 @@ function WineController($http, $state, $scope){
     $http.put(`${server}/wines/${wine.id}`, angular.toJson(wine))
     .then(function(res){
       console.log(res);
+      $state.go('show_wine')
     })
   }
   self.editWine = editWine;
+
+  function deleteWine(wine){
+    $http.delete(`${server}/wines/${wine.id}`)
+    .then(function(res){
+      console.log(res);
+      $state.go('index')
+    })
+  }
+  self.deleteWine = deleteWine;
 }
