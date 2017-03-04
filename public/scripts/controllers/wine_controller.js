@@ -35,7 +35,8 @@ function WineController($http, $state, $scope){
     $http.put(`${server}/wines/${wine.id}`, angular.toJson(wine))
     .then(function(res){
       console.log(res);
-      $state.go('show_wine')
+      self.showEdit = false;
+      $state.reload()
     })
   }
   self.editWine = editWine;
