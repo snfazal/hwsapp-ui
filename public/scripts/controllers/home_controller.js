@@ -11,4 +11,9 @@ function HomeController($scope, $http) {
   $scope.$on('userLoggedOut', function(event, data) {
     self.currentUser = null;
   });
+
+  // show wine page
+    $scope.$on('nowShowing', function(event, data) {
+      self.nowShowing = data;
+    });
 }

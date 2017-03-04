@@ -1,4 +1,4 @@
-function WineController($http, $state){
+function WineController($http, $state, $scope){
   var self = this;
   var server = 'http://localhost:3000';
 
@@ -25,6 +25,7 @@ function WineController($http, $state){
     console.log(wine);
     self.nowShowing = wine;
     console.log(self.nowShowing);
+    $scope.$emit('nowShowing', self.nowShowing);
     $state.go('show_wine');
   }
   self.showWine = showWine;
