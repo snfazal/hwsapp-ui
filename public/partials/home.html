@@ -1,2 +1,16 @@
-<button ui-sref="create_wine">Add a new wine</button>
-<button ui-sref="create_post">Add a new post</button>
+<div ng-controller="WineController as wines">
+  <button ui-sref="create_wine">Add a new wine</button>
+  <button ui-sref="create_post">Add a new post</button>
+  <button ng-click="wines.getWines()">Get wines</button>
+  <div ng-repeat="wine in wines.allWines" class="wines">
+    <img ng-src="wine.image_url">
+    <ul>
+      <li>Name: {{wine.name}}</li>
+      <li>Type of wine: {{wine.kind}}</li>
+      <li>Country of Origin: {{wine.country}}</li>
+      <li>Region: {{wine.region}}</li>
+      <li>Rating: {{wine.rating}}</li>
+      <li>{{wine.description}}</li>
+    </ul>
+  </div>
+</div>
