@@ -47,5 +47,13 @@ function PostController($http, $state, $scope){
   }
   self.editPost = editPost;
 
+function deletePost(post){
+  $http.delete(`${server}/posts/${post.id}`)
+  .then(function(res){
+    console.log(res);
+    $state.go('index')
+  })
+}
 
+self.delete = deletePost;
 }
