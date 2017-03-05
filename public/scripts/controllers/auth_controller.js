@@ -20,7 +20,7 @@ function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
 
       $scope.$emit('userLoggedIn', res.data.user);
       $rootScope.$emit('fetchData', res.data.user);
-      $state.go('index');
+      $state.go('view_favorites');
     });
   }
 

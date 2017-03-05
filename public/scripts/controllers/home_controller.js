@@ -15,4 +15,11 @@ function HomeController($scope, $http) {
     $scope.$on('nowShowing', function(event, data) {
       self.nowShowing = data;
     });
+
+    // favorites
+    $scope.$on('gotFavorites', function(event, data) {
+      $scope.allFavorites = data;
+    });
+
+
 }

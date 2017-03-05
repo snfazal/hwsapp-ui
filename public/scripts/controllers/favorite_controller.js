@@ -6,6 +6,7 @@ function FavoriteController($http, $state, $scope){
     $http.get(`${server}/favorites`)
       .then(function(res){
         self.allFavorites = res.data.favorites;
+        $scope.$emit('gotFavorites', self.allFavorites);
       })
   }
   getFavorites();

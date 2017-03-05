@@ -5,6 +5,7 @@
     <ul>
       <li ng-click="wines.showWine(wine)">Name: {{wine.name}}</li>
       <li>Type of wine: {{wine.kind}}</li>
+      <button ng-if="wine.isFavorite" type="button">Unfavorite</button>
     </ul>
   </div>
 </div>
