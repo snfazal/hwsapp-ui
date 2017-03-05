@@ -57,5 +57,5 @@ function deletePost(post){
   })
 }
 
-self.delete = deletePost;
+self.deletePost = deletePost;
 }
