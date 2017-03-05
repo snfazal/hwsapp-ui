@@ -1,6 +1,6 @@
 function AuthController($http, $state, $scope, $rootScope, AuthTokenFactory){
   var self = this;
-  var server = 'https://wineshare.herokuapp.com/';
+  var server = 'https://wineshare.herokuapp.com';
 
   self.test = "hello";
 
