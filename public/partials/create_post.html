@@ -1,11 +1,9 @@
 <div ng-controller="PostController as post">
   <form ng-submit=post.createPost(post)>
-    <label for="body">article</label>
+    <label for="body">body</label>
     <input name="body" type="text" ng-model="post.body">
-    
     <label for="description">description</label>
     <input name="description" type="text" ng-model="post.description">
-
    <input type="submit">
   </form>
 </div>
