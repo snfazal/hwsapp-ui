@@ -19,6 +19,7 @@
     <script src="/scripts/controllers/auth_controller.js"></script>
     <script src="/scripts/controllers/wine_controller.js"></script>
     <script src="/scripts/controllers/post_controller.js"></script>
+    <script src="/scripts/controllers/favorite_controller.js"></script>
 
 
 
@@ -35,6 +36,7 @@
     <div ng-controller="AuthController as auth">
       <a ng-if="!home.currentUser" ui-sref="signup">signup</a>
       <a ng-if="!home.currentUser" ui-sref="login">login</a>
+      <a ui-sref="view_favorites">View Favorited Wines</a>
       <ul>
 
         <li ng-if="home.currentUser" ng-click="auth.logout()">logout</li>
