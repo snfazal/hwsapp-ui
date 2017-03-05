@@ -11,6 +11,7 @@
     <li>{{home.nowShowing.description}}</li>
   </ul>
 </div>
+    <button type="button" ng-click="wine.favoriteWine()">Favorite Wine</button>
     <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="wines.showEdit = !wines.showEdit" type="button" name="button" >Edit Wine</button>
     <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="wines.deleteWine(home.nowShowing)" type="button" name="button">Delete Wine</button>
   <div ng-if="wines.showEdit">
