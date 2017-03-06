@@ -33,13 +33,23 @@
   </head>
 
   <body ng-controller="HomeController as home">
+    <div ng-controller="AuthController as auth" class="nav">
+      <div class="nav-left">
+      <a ui-sref="index" class="nav-item">home</a>
+        <img src="https://ga-students.slack.com/files/snfazal/F4DGBBBLH/hinsdalewineshop_logo_horiz.jpg" alt="logo" class="nav-item">
+      </a>
 
-    <a ui-sref="index">home</a>
-    <div ng-controller="AuthController as auth">
-      <a ng-if="!home.currentUser" ui-sref="signup">signup</a>
-      <a ng-if="!home.currentUser" ui-sref="login">login</a>
-      <a ng-if="home.currentUser" ng-click="auth.logout()">logout</a>
+    <div class="nav-center">
+      <a ng-if="!home.currentUser" ui-sref="signup" class="nav-item">signup</a>
     </div>
+      <div class="nav-right">
+      <a ng-if="!home.currentUser" ui-sref="login" class="nav-item">login</a>
+    </div>
+    <div class="nav-right">
+      <a ng-if="home.currentUser" ng-click="auth.logout()" class="nav-item">logout</a>
+    </div>
+  </div>
+</div>
 
     <ui-view>
     </ui-view>
