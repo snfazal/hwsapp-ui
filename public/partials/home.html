@@ -11,7 +11,7 @@
   </div>
 </div>
 <div ng-controller="PostController as posts">
-  <button ui-sref="create_post">Add a new post</button>
+  <button ng-if="home.currentUser" ui-sref="create_post">Add a new post</button>
   <div ng-repeat="post in posts.allPosts" class="posts">
     <ul>
       <li ng-click="posts.showPost(post)">New Post: {{post.body}}</li>
