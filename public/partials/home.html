@@ -2,10 +2,12 @@
 <div ng-controller="WineController as wines">
   <button ng-if="home.currentUser" ui-sref="create_wine">Add a new wine</button>
   <div ng-repeat="wine in wines.allWines" class="wines" class="card">
-    <figure class="image" style="height: 100px; width: 100px;">
+    <div class="card-image">
+    <figure class="image is-128x128">
       <img ng-src="{{wine.image_url}}" class="card-image">
     </figure>
-    <ul>
+    </div>
+    <ul class="card-content">
       <li ng-click="wines.showWine(wine)">Name: {{wine.name}}</li>
       <li>Type of wine: {{wine.kind}}</li>
       <button ng-click="wines.addFav(wine)" ng-if="!wine.isFavorite home.currentUser" type="button">Favorite</button>
