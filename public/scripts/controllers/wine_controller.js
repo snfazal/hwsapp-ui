@@ -1,6 +1,6 @@
 function WineController($http, $state, $scope){
   var self = this;
-  var server = 'http://localhost:3000';
+  var server = 'https://wineshare.herokuapp.com';
 
   function createWine(wine){
       console.log(wine);
