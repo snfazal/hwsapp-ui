@@ -10,7 +10,7 @@
     <ul class="card-content">
       <li ng-click="wines.showWine(wine)">Name: {{wine.name}}</li>
       <li>Type of wine: {{wine.kind}}</li>
-      <button ng-click="wines.addFav(wine)" ng-if="!wine.isFavorite home.currentUser" type="button">Favorite</button>
+      <button ng-click="wines.addFav(wine)" ng-if="!wine.isFavorite && home.currentUser" type="button">Favorite</button>
     </ul>
   </div>
 </div>
