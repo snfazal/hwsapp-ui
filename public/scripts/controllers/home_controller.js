@@ -1,6 +1,6 @@
 function HomeController($scope, $http) {
   var self = this;
-
+  
  // user login
   $scope.$on('userLoggedIn', function(event, data){
     self.currentUser = data;

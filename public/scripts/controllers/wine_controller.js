@@ -61,4 +61,14 @@ function WineController($http, $state, $scope){
     }
   }
   self.compareFavorites = compareFavorites;
+
+  function addFav(fav){
+    $http.post(`${server}/favorites/`, {wine: fav})
+      .then(function(res){
+        $state.go('view_favorites');
+      })
+  }
+
+  self.addFav = addFav;
+
 }
