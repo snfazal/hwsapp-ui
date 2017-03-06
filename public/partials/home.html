@@ -1,6 +1,6 @@
-<a ui-sref="view_favorites">View Favorited Wines</a>
+<a ng-if="home.currentUser" ui-sref="view_favorites">View Favorited Wines</a>
 <div ng-controller="WineController as wines">
-  <button ui-sref="create_wine">Add a new wine</button>
+  <button ng-if="home.currentUser" ui-sref="create_wine">Add a new wine</button>
   <div ng-repeat="wine in wines.allWines" class="wines">
     <img ng-src="{{wine.image_url}}">
     <ul>
