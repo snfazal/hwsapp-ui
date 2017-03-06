@@ -1,7 +1,7 @@
 <div ng-controller="WineController as wines" class="card">
   <div ng-if=!wines.showEdit>
 
-  <img ng-src="wines.nowShowing.image_url" class="card-image">
+  <img ng-src="{{wines.nowShowing.image_url}}" class="card-image">
   <ul>
     <li>Name: {{home.nowShowing.name}}</li>
     <li>Type of wines: {{home.nowShowing.kind}}</li>
