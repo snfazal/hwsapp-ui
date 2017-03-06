@@ -1,5 +1,5 @@
 <div ng-controller="WineController as wines" class="tile is-ancestor">
-  <button ng-if="home.currentUser" ui-sref="create_wine">Add a new wine</button>
+
   <div ng-repeat="wine in wines.allWines" class="tile is-parent is-vertical">
     <div class="card">
       <div class="card-image">
@@ -10,15 +10,18 @@
       <ul class="card-content">
         <li ng-click="wines.showWine(wine)">Name: {{wine.name}}</li>
         <li>Type of wine: {{wine.kind}}</li>
-        <button ng-click="wines.addFav(wine)" ng-if="!wine.isFavorite && home.currentUser" type="button">Favorite</button>
+        <button class="button" ng-click="wines.addFav(wine)" ng-if="!wine.isFavorite && home.currentUser" type="button">Favorite</button>
       </ul>
     </div>
+  </div>
+  <div class="">
+    <button class="button" ng-if="home.currentUser" ui-sref="create_wine">Add a new wine</button>
   </div>
 </div>
 <a ng-if="home.currentUser" ui-sref="view_favorites">View Favorited Wines</a>
 
 <div ng-controller="PostController as posts">
-  <button ng-if="home.currentUser" ui-sref="create_post">Add a new post</button>
+  <button class="button" ng-if="home.currentUser" ui-sref="create_post">Add a new post</button>
   <div class="title">
     Latest Posts
   </div>
