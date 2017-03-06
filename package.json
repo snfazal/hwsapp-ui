@@ -4,7 +4,6 @@
   "description": "wineApp",
   "main": "server.js",
   "dependencies": {
-    "bulma": "^0.3.2",
     "express": "^4.15.0",
     "font-awesome": "^4.7.0",
     "morgan": "^1.8.1"
