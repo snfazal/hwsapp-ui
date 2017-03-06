@@ -1,7 +1,7 @@
 <div ng-controller="PostController as post">
   <form ng-submit=post.createPost(post)>
     <label for="body">body</label>
-    <input name="body" type="text" ng-model="post.body">
+    <textarea rows="4" cols="50" name="body" type="text" ng-model="post.body"></textarea>
     <label for="description">description</label>
     <input name="description" type="text" ng-model="post.description">
    <input type="submit">
