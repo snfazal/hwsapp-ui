@@ -4,7 +4,7 @@
     <div class="card">
       <div class="card-image">
         <figure class="image is-4by3">
-          <img ng-src="{{wine.image_url}}" >
+          <img ng-src="{{wine.image_url}}" class="image">
         </figure>
       </div>
       <ul class="card-content">
@@ -14,7 +14,7 @@
       </ul>
     </div>
   </div>
-  <div class="">
+  <div>
     <button class="button" ng-if="home.currentUser" ui-sref="create_wine">Add a new wine</button>
   </div>
 </div>

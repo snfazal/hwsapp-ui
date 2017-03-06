@@ -1,6 +1,6 @@
 function PostController($http, $state, $scope){
   var self = this;
-  var server = 'https://wineshare.herokuapp.com';
+  var server = 'http://localhost:3000';
 
   //route creates new post from create_post
   function createPost(post){

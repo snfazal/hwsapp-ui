@@ -1,6 +1,6 @@
 function FavoriteController($http, $state, $scope){
   var self = this;
-  var server = 'https://wineshare.herokuapp.com';
+  var server = 'http://localhost:3000';
 
   function getFavorites(){
     $http.get(`${server}/favorites`)
