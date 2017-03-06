@@ -1,6 +1,6 @@
 function WineController($http, $state, $scope){
   var self = this;
-  var server = 'http://localhost:3000';
+  var server = 'https://wineshare.herokuapp.com';
 
   function createWine(wine){
       console.log(wine);
@@ -22,19 +22,15 @@ function WineController($http, $state, $scope){
   getWines();
 
   function showWine(wine){
-    console.log(wine);
     self.nowShowing = wine;
-    console.log(self.nowShowing);
     $scope.$emit('nowShowing', self.nowShowing);
     $state.go('show_wine');
   }
   self.showWine = showWine;
 
   function editWine(wine){
-    console.log(wine);
     $http.put(`${server}/wines/${wine.id}`, angular.toJson(wine))
     .then(function(res){
-      console.log(res);
       self.showEdit = false;
       $state.reload()
     })
@@ -44,7 +40,6 @@ function WineController($http, $state, $scope){
   function deleteWine(wine){
     $http.delete(`${server}/wines/${wine.id}`)
     .then(function(res){
-      console.log(res);
       $state.go('index')
     })
   }

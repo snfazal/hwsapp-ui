@@ -11,8 +11,8 @@
     <li>{{home.nowShowing.description}}</li>
   </ul>
 </div>
-    <button ng-click="wines.showEdit = !wines.showEdit" type="button" name="button" >Edit Wine</button>
-    <button ng-click="wines.deleteWine(home.nowShowing)" type="button" name="button">Delete Wine</button>
+    <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="wines.showEdit = !wines.showEdit" type="button" name="button" >Edit Wine</button>
+    <button ng-if="home.currentUser.id == home.nowShowing.user_id" ng-click="wines.deleteWine(home.nowShowing)" type="button" name="button">Delete Wine</button>
   <div ng-if="wines.showEdit">
     <form ng-submit="wines.editWine(home.nowShowing)">
       <div>Name:<input ng-model="home.nowShowing.name" type="text" name="name" placeholder="{{home.nowShowing.name}}"></div>

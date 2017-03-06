@@ -1,0 +1,21 @@
+<div ng-controller="PostController as posts">
+  <div ng-if="!posts.showEdit">
+
+    <!-- <img ng-src="posts.nowShowing.image_url"> -->
+    <ul>
+      <li>Body: {{home.nowShowing.body}}</li>
+      <li>Description: {{home.nowShowing.description}}</li>
+    </ul>
+  </div>
+  <button ng-click="posts.showEdit = !posts.showEdit" type="button" name="button">Edit Post</button>
+  <button ng-click="posts.deletePost(home.nowShowing)" type="button" name="button">Delete Post</button>
+
+  <div ng-if="posts.showEdit">
+    <form ng-submit="posts.editPost(home.nowShowing)">
+      <div>New Post:<input
+      ng-model="home.nowShowing.body" type="text" name="body" placeholder="{{home.nowShowing.body}}"></div>
+      <div>Description: <input ng-model="home.nowShowing.description" type="text" name="description" placeholder="{{home.nowShowing.description}}"></div>
+      <div><input type="submit"></div>
+    </form>
+  </div>
+</div>
