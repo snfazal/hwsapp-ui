@@ -16,6 +16,10 @@ function WineController($http, $state, $scope){
     $http.get(`${server}/wines`)
       .then(function(res){
         self.allWines = res.data.wines;
+        console.log(self.allWines);
+        if ($scope.allFavorites){
+          self.compareFavorites();
+        }
       })
   }
   self.getWines = getWines;
@@ -44,4 +48,25 @@ function WineController($http, $state, $scope){
     })
   }
   self.deleteWine = deleteWine;
+
+  function compareFavorites(){
+    for(var i = 0; i < self.allWines.length; i++){
+      for(var j= 0; j < $scope.allFavorites.length; j++){
+        if (self.allWines[i].id == $scope.allFavorites[j].id ){
+          self.allWines[i].isFavorite = true;
+        }
+      }
+    }
+  }
+  self.compareFavorites = compareFavorites;
+
+  function addFav(fav){
+    $http.post(`${server}/favorites/`, {wine: fav})
+      .then(function(res){
+        $state.go('view_favorites');
+      })
+  }
+
+  self.addFav = addFav;
+
 }

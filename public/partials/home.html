@@ -1,15 +1,17 @@
+<a ng-if="home.currentUser" ui-sref="view_favorites">View Favorited Wines</a>
 <div ng-controller="WineController as wines">
-  <button ui-sref="create_wine">Add a new wine</button>
+  <button ng-if="home.currentUser" ui-sref="create_wine">Add a new wine</button>
   <div ng-repeat="wine in wines.allWines" class="wines">
-    <!-- <img ng-src="{{wine.image_url}}"> -->
+    <img ng-src="{{wine.image_url}}">
     <ul>
       <li ng-click="wines.showWine(wine)">Name: {{wine.name}}</li>
       <li>Type of wine: {{wine.kind}}</li>
+      <button ng-click="wines.addFav(wine)" ng-if="!wine.isFavorite home.currentUser" type="button">Favorite</button>
     </ul>
   </div>
 </div>
 <div ng-controller="PostController as posts">
-  <button ui-sref="create_post">Add a new post</button>
+  <button ng-if="home.currentUser" ui-sref="create_post">Add a new post</button>
   <div ng-repeat="post in posts.allPosts" class="posts">
     <ul>
       <li ng-click="posts.showPost(post)">New Post: {{post.body}}</li>

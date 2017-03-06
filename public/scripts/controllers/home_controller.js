@@ -1,6 +1,6 @@
 function HomeController($scope, $http) {
   var self = this;
-
+  
  // user login
   $scope.$on('userLoggedIn', function(event, data){
     self.currentUser = data;
@@ -15,4 +15,11 @@ function HomeController($scope, $http) {
     $scope.$on('nowShowing', function(event, data) {
       self.nowShowing = data;
     });
+
+    // favorites
+    $scope.$on('gotFavorites', function(event, data) {
+      $scope.allFavorites = data;
+    });
+
+
 }

@@ -13,18 +13,14 @@
     <!-- factories -->
     <script src="/scripts/factories/auth_interceptor.js"></script>
     <script src="/scripts/factories/auth_token_factory.js"></script>
-
     <!-- controllers -->
     <script src="/scripts/controllers/home_controller.js"></script>
     <script src="/scripts/controllers/auth_controller.js"></script>
     <script src="/scripts/controllers/wine_controller.js"></script>
     <script src="/scripts/controllers/post_controller.js"></script>
-
-
-
+    <script src="/scripts/controllers/favorite_controller.js"></script>
     <!-- APP -->
     <script src="/scripts/app.js"></script>
-
     <!-- stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -33,16 +29,16 @@
 
     <!-- font awesome -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
   </head>
+
   <body ng-controller="HomeController as home">
+
     <a ui-sref="index">home</a>
     <div ng-controller="AuthController as auth">
       <a ng-if="!home.currentUser" ui-sref="signup">signup</a>
       <a ng-if="!home.currentUser" ui-sref="login">login</a>
-      <ul>
-
-        <li ng-if="home.currentUser" ng-click="auth.logout()">logout</li>
-      </ul>
+      <a ng-if="home.currentUser" ng-click="auth.logout()">logout</a>
     </div>
 
     <ui-view>
