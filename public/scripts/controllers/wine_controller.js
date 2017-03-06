@@ -50,8 +50,6 @@ function WineController($http, $state, $scope){
   self.deleteWine = deleteWine;
 
   function compareFavorites(){
-    console.log(self.allWines);
-    console.log($scope.allFavorites);
     for(var i = 0; i < self.allWines.length; i++){
       for(var j= 0; j < $scope.allFavorites.length; j++){
         if (self.allWines[i].id == $scope.allFavorites[j].id ){

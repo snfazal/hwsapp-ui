@@ -14,18 +14,14 @@ function PostController($http, $state, $scope){
   }
   self.createPost = createPost;
 
-  //
   function getPosts(){
-    console.log("GOT POSTS")
     $http.get(`${server}/posts`)
     .then(function(res){
-      console.log(res)
       self.allPosts = res.data.post;
     })
   }
   self.getPosts = getPosts;
   getPosts();
-
 
   function showPost(post){
     console.log(post);
